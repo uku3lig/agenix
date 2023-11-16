@@ -181,7 +181,7 @@ function edit {
 
     ENCRYPT+=(-o "$REENCRYPTED_FILE")
 
-    @ageBin@ "${ENCRYPT[@]}" <"$CLEARTEXT_FILE" || exit 1
+    @ageBin@ "${ENCRYPT[@]}" -a <"$CLEARTEXT_FILE" || exit 1
 
     mkdir -p "$(dirname "$FILE")"
 
